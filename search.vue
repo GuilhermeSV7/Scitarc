@@ -1,0 +1,123 @@
+<template>
+    <div class="search-box-with">
+      <div class="search-box-simple">
+        <div class="frame">
+          <div class="left-content"> <!-- Conteúdo à esquerda -->
+            <img class="iconly-light-outline" alt="Iconly light outline" src="/Search.png" />
+            <p class="sub-menu-item-copy">Digite pelo menos 3 caracteres</p>
+          </div>
+          <div class="right-content"> <!-- Conteúdo à direita -->
+            <div class="options">
+              <div class="option" @click="performSearch('Moléculas')">Moléculas</div>
+              <div class="option" @click="performSearch('Organismos ou pragas')">Organismos ou pragas</div>
+              <div class="option" @click="performSearch('Publicações')">Publicações</div>
+              <div class="option" @click="performSearch('Patentes')">Patentes</div>
+              <div class="patentes-button" @click="performSearch('Pesquisa')">
+                <div class="button-content">
+                  <img class="iconly-light-outline" alt="Iconly light outline" src="/Search.png" />
+                  Pesquisa
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    name: "SearchBoxWith",
+    methods: {
+      performSearch(option) {
+        // Implemente a lógica para realizar a pesquisa com a opção selecionada
+        alert("Você selecionou: " + option);
+      }
+    }
+  };
+  </script>
+  
+  <style scoped>
+    .search-box-with {
+      border: 2px solid;
+      border-color: #70b0e4;
+      border-radius: 60px;
+      height: 75px;
+      width: 1218px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-box-simple {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .frame {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      width: 100%; /* Para ocupar toda a largura disponível */
+      padding: 0 30px; /* Ajusta o espaçamento interno */
+      justify-content: space-between; /* Alinha os elementos à esquerda e à direita */
+    }
+
+    .left-content {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .right-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .iconly-light-outline {
+      height: 24px;
+      width: 24px;
+    }
+
+    .sub-menu-item-copy {
+      color: #000000;
+      font-family: var(--title-16-font-family);
+      font-size: var(--title-16-font-size);
+      font-style: var(--title-16-font-style);
+      font-weight: var(--title-16-font-weight);
+      letter-spacing: var(--title-16-letter-spacing);
+      line-height: var(--title-16-line-height);
+      white-space: nowrap;
+    }
+
+    .options {
+      display: flex;
+      gap: 10px;
+    }
+
+    .option {
+      background-color: #E8E8E8;
+      border-radius: 60px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .patentes-button {
+  background: linear-gradient(90deg, #26BBFB, #581DB6, #26BBFB);
+  color: #fff;
+  border-radius: 60px;
+  cursor: pointer;
+  display: flex; /* Tornar o botão um contêiner flexível */
+  align-items: center; /* Alinhar verticalmente no centro */
+  padding: 10px 20px;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre o ícone e o texto */
+}
+  </style>
+  
