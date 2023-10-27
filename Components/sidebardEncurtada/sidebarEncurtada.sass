@@ -1,0 +1,125 @@
+* 
+  margin: 0
+  padding: 0
+  font-family: "Inter-SemiBold", Helvetica
+  font-weight: 600
+
+.menu-lateral
+  position: fixed
+  background: linear-gradient(100deg, rgb(38, 187, 251) 0%, rgb(88, 29, 182) 50.52%, rgb(38, 187, 251) 100%)
+  width: 8rem
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 100%
+  top: 0
+  left: 0
+
+.menu-lateral header
+  display: flex
+  padding: 10px
+  margin: 20px
+  top: 0
+
+#btn-expandir button, button>img
+  border-style: none
+  width: 32px
+  height: 32px
+
+.menu-lateral-lista1 .txt-menu, .menu-lateral-lista2 .txt-menu, .menu-lateral-lista1 .icon-menu-2, .menu-lateral-lista2 .icon-menu-2
+  display: none
+
+#btn-expandir button
+  background-color: #5135C1
+  position: absolute
+  margin-left: 10px
+  border-radius: 0 8px 8px 0
+  cursor: pointer
+
+.menu-lateral ul
+  list-style: none
+
+.menu-lateral .menu-lateral-lista1
+  margin-bottom: 320px
+
+ul li.iten-menu a
+  width: 64px
+  height: 64px
+  color: #fff
+  text-decoration: none
+  font-size: 14px
+  padding: 5px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 16px
+  margin: 5px 0
+
+ul li.iten-menu a:hover
+  background-color: #fff
+
+.divider
+  height: 1px
+  width: 100%
+  background-color: #fff
+  opacity: 0.1
+
+ul li.iten-menu a .icon-menu>img, .icon-menu-2>img
+  width: 32px
+  height: 32px
+
+ul li.iten-menu
+  transition: .2s
+
+.iten-menu-user
+  margin-top: 30px
+
+ul li.ativo
+  background-color: #fff
+  border-radius: 16px
+
+.alter
+  display: none
+
+.menu-lateral #logo-expandida
+  display: none
+
+.menu-lateral.expand
+  width: 256px
+  transition: 0.8s
+
+.menu-lateral.expand header
+  display: flex
+  padding: 10px
+  margin: 20px
+  top: 0
+
+.menu-lateral.expand #btn-expandir button
+  background-color: #5135C1
+  position: absolute
+  margin-top: 15px
+  margin-left: 27px
+  border-radius: 0 8px 8px 0
+  transform: scaleX(-1)
+  cursor: pointer
+  transition: 1.2s
+
+.menu-lateral.expand .txt-menu
+  margin-left: 20px
+  margin-right: 24px
+
+ul li.ativo
+  background-color: #5135C1
+  border-radius: 16px
+  opacity: 0.5
+
+ul li.iten-menu:hover
+  background-color: #5135C1
+  color: #5135C1
+  border-radius: 16px
+
+.app
+  background-color: #f0f0f0
+  font-family: Arial, sans-serif
